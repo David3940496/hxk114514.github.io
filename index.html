@@ -9,7 +9,7 @@
       margin: 0;
       padding: 0;
       font-family: sans-serif;
-      background-color: #fff3ea;
+      background-color: #ffe6d2;
       line-height: 1.6;
     }
 
@@ -39,6 +39,36 @@
       text-decoration: none;
     }
 
+    .question-navigator {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      margin: 10px auto 20px;
+      flex-wrap: wrap;
+    }
+
+    .question-navigator input {
+      width: 50px;
+      padding: 5px;
+      text-align: center;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    .question-navigator button {
+      background-color: #1976d2;
+      color: white;
+      border: none;
+      padding: 6px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .question-navigator button:hover {
+      background-color: #0d47a1;
+    }
+
     .qa-block {
       display: flex;
       flex-direction: row;
@@ -53,7 +83,7 @@
 
     .qa-block h3 {
       flex: 1 1 250px;
-      color: rgb(128, 0, 92);
+      color: rgb(95, 0, 121);
       margin: 0;
     }
 
@@ -66,57 +96,9 @@
       padding-left: 20px;
     }
 
-    .flex-demo, .grid-demo {
-      margin-top: 2rem;
-    }
-
-    .flex-demo .row, .flex-demo .column {
-      display: flex;
-      gap: 10px;
-      margin: 10px 0;
-    }
-
-    .flex-demo .column {
-      flex-direction: column;
-      height: 180px;
-    }
-
-    .box, .grid-item {
-      background-color: salmon;
-      color: white;
-      font-weight: bold;
-      border-radius: 10px;
-      padding: 16px;
-      text-align: center;
-    }
-
-    .box {
-      width: 60px;
-      height: 60px;
-    }
-
-    .justify-demo {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #f0f0f0;
-      padding: 10px;
-      border-radius: 8px;
-    }
-
-    .grid-demo {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-    }
-
     @media (max-width: 700px) {
       .qa-block {
         flex-direction: column;
-      }
-
-      .grid-demo {
-        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -129,72 +111,117 @@
       <h2><a href="https://www.myoungaekim.com/" target="_blank">https://www.myoungaekim.com/</a></h2>
     </div>
 
-    <div class="qa-block">
-      <h3>1. What was the first thing you paid attention to?</h3>
-      <p>The first thing I noticed was the stark black and white interface, where only a few moving images broke the silence. Videos autoplayed, and there was no obvious interactivity at first glance.</p>
+    <div class="question-navigator">
+      <button id="prev-btn">◀</button>
+      <input type="number" id="question-input" min="1" max="13" value="1">
+      <button id="next-btn">▶</button>
+      <button id="go-btn">Go</button>
     </div>
 
-    <div class="qa-block">
-      <h3>2. List of actions in two minutes:</h3>
+    <div class="qa-block" id="q1">
+      <h3>1. What was the first thing you paid attention to?</h3>
+      <p>I then spent two minutes exploring the functions of these by myself. In addition to being able to scroll on the homepage, the 1234 numbers like calendars arranged on the side can be opened like windows.</p>
+    </div>
+
+    <div class="qa-block" id="q2">
+      <h3>2. Spend two minutes with the experience and create a list of each of your discrete actions.</h3>
       <ul>
         <li>Clicked on box 1: Viewed the content</li>
         <li>Clicked on box 2: Explored the revealed project</li>
         <li>Clicked on box 3: Observed the displayed work</li>
         <li>Clicked on box 4: Engaged with the content inside</li>
       </ul>
+      <p>I explored the functions of these by myself. In addition to being able to scroll on the homepage, the 1234 numbers like calendars arranged on the side can be opened like windows.</p>
     </div>
 
-    <div class="qa-block">
+    <div class="qa-block" id="q3">
       <h3>3. Most time engaging with?</h3>
-      <p>Clicking on each window took most of my attention — each one revealed new content with different styles and arrangements.</p>
+      <p>The most time-consuming experience is to click on these windows because each window has a different pattern or text. When you click on these patterns or texts in the calendars, the shape or color of the entire interface will change.</p>
     </div>
 
-    <div class="qa-block">
+    <div class="qa-block" id="q4">
       <h3>4. Most common action?</h3>
-      <p>Scrolling and clicking windows. But the harsh contrast and lack of rounded borders made the site feel visually rigid.</p>
+      <p>The most common operations in the two minutes of the field are scrolling the interface and opening windows. But overall there are still many shortcomings, such as pure black and white and not rounded borders, which make the whole interface look boring.But clicking on the calendar window will interact and slowly open the window, but it's like implementing a 3D effect on a 2D interface.</p>
     </div>
 
-    <div class="qa-block">
+    <div class="qa-block" id="q5">
       <h3>5. Impression of the goal?</h3>
-      <p>It feels like a digital showcase of creative exploration, presented through a gamified calendar interface.</p>
+      <p>It feels like a digital showcase of creative exploration, presented through a gamified calendar interface. I can learn some of his code from it, such as changing the background color or making the Christmas items shake when hovering the mouse</p>
     </div>
 
-    <div class="qa-block">
+    <div class="qa-block" id="q6">
       <h3>6. How is this goal communicated?</h3>
       <p>The numbered boxes and hidden surprises suggest discovery and creative depth — each click unveils something new.</p>
     </div>
 
-    <div class="qa-block">
+    <div class="qa-block" id="q7">
       <h3>7. Interaction over time?</h3>
-      <p>First-time users might leave early, but deeper exploration encourages extended visits as more is revealed.</p>
+      <p>Note that some customers may exit directly when they see it for the first time, but as the exploration goes deeper and deeper, each click opens a window and an interface as a new path is discovered, so if the customer chooses to continue exploring, the time will become longer and longer.</p>
     </div>
 
-    <div class="qa-block">
+    <div class="qa-block" id="q8">
       <h3>8. How is this communicated?</h3>
       <p>The calendar-style layout implies a finite number of items to be completed in one go — or revisited casually.</p>
     </div>
 
-    <div class="qa-block">
+    <div class="qa-block" id="q9">
       <h3>9. Media references?</h3>
-      <p>Advent calendars and digital portfolios are both clearly referenced.</p>
+      <p>The experience references traditional advent calendars and digital portfolios.</p>
     </div>
 
-    <div class="qa-block">
+    <div class="qa-block" id="q10">
       <h3>10. What does this tell you about interaction?</h3>
-      <p>It suggests exploration should be slow and methodical — box-by-box, like opening gifts.</p>
+      <p>The advent calendar reference suggests a sequential exploration, prompting users to click each box methodically to unveil its contents.</p>
     </div>
 
-    <div class="qa-block">
+    <div class="qa-block" id="q11">
       <h3>11. What about how you should feel?</h3>
-      <p>Anticipation and delight are embedded in the interface — you’re meant to enjoy each step.</p>
+      <p>The advent calendar theme evokes feelings of anticipation and delight, encouraging users to approach each click with curiosity and excitement.</p>
     </div>
 
-    <div class="qa-block">
-      <h3>12. Most frustrating part?</h3>
-      <p>The lack of color variety and hover cues made it feel flat and uncertain at first.</p>
+    <div class="qa-block" id="q12">
+      <h3>12. Most satisfying & frustrating part?</h3>
+      <p>For me the most frustrating part for me is the first thing I see when I open this webpage. Its design is all black and white with no rounded borders. A minor frustration was the lack of immediate visual feedback when hovering over the boxes, which could have enhanced the interactive experience by indicating interactivity. But the fun part is that every time you try to explore these windows, it will give you a different feeling. If you want to do better, you can add more patterns or buttons for interactive experience</p>
     </div>
+  </div>
 
-    <div class="qa-block">
-      <h3>13. Most satisfying part?</h3>
-      <p>The moment when a window opens to reveal something unexpected — it’s satisfying and keeps you curious.</p>
-    </div>
+  <script>
+    const input = document.getElementById("question-input");
+    const goBtn = document.getElementById("go-btn");
+    const prevBtn = document.getElementById("prev-btn");
+    const nextBtn = document.getElementById("next-btn");
+
+    function scrollToQuestion(num) {
+      const target = document.getElementById(`q${num}`);
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+
+    goBtn.addEventListener("click", () => {
+      const num = parseInt(input.value);
+      if (num >= 1 && num <= 13) {
+        scrollToQuestion(num);
+      }
+    });
+
+    prevBtn.addEventListener("click", () => {
+      let num = parseInt(input.value);
+      if (num > 1) {
+        num--;
+        input.value = num;
+        scrollToQuestion(num);
+      }
+    });
+
+    nextBtn.addEventListener("click", () => {
+      let num = parseInt(input.value);
+      if (num < 13) {
+        num++;
+        input.value = num;
+        scrollToQuestion(num);
+      }
+    });
+  </script>
+</body>
+</html>
