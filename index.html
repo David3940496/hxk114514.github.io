@@ -1,11 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Assignment 1 - Interactive Experience</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background-color: #fff3ea;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+      display: grid;
+      gap: 2rem;
+    }
+
+    .header {
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: center;
+      text-align: center;
+      gap: 0.5rem;
+    }
+
+    .header h1 {
+      color: rgb(0, 165, 121);
+      margin: 0;
+    }
+
+    .header h2 a {
+      color: rgb(0, 68, 255);
+      text-decoration: none;
+    }
+
+    .qa-block {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      background: #f9f9f9;
+      border-left: 4px solid salmon;
+      padding: 16px;
+      border-radius: 8px;
+    }
+
+    .qa-block h3 {
+      flex: 1 1 250px;
+      color: rgb(128, 0, 92);
+      margin: 0;
+    }
+
+    .qa-block p, .qa-block ul {
+      flex: 2 1 600px;
+      margin: 0;
+    }
+
+    .qa-block ul {
+      padding-left: 20px;
+    }
+
+    .flex-demo, .grid-demo {
+      margin-top: 2rem;
+    }
+
+    .flex-demo .row, .flex-demo .column {
+      display: flex;
+      gap: 10px;
+      margin: 10px 0;
+    }
+
+    .flex-demo .column {
+      flex-direction: column;
+      height: 180px;
+    }
+
+    .box, .grid-item {
+      background-color: salmon;
+      color: white;
+      font-weight: bold;
+      border-radius: 10px;
+      padding: 16px;
+      text-align: center;
+    }
+
+    .box {
+      width: 60px;
+      height: 60px;
+    }
+
+    .justify-demo {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #f0f0f0;
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    .grid-demo {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    @media (max-width: 700px) {
+      .qa-block {
+        flex-direction: column;
+      }
+
+      .grid-demo {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
-    <h1>A1 - Interactive Experience Research Project</h1>
-</body>
-</html>
+  <div class="container">
+    <div class="header">
+      <p><strong>Ziming Qin</strong></p>
+      <h1>Assignment 1: Interactive Experience Research Project</h1>
+      <h2><a href="https://www.myoungaekim.com/" target="_blank">https://www.myoungaekim.com/</a></h2>
+    </div>
+
+    <div class="qa-block">
+      <h3>1. What was the first thing you paid attention to?</h3>
+      <p>The first thing I noticed was the stark black and white interface, where only a few moving images broke the silence. Videos autoplayed, and there was no obvious interactivity at first glance.</p>
+    </div>
+
+    <div class="qa-block">
+      <h3>2. List of actions in two minutes:</h3>
+      <ul>
+        <li>Clicked on box 1: Viewed the content</li>
+        <li>Clicked on box 2: Explored the revealed project</li>
+        <li>Clicked on box 3: Observed the displayed work</li>
+        <li>Clicked on box 4: Engaged with the content inside</li>
+      </ul>
+    </div>
+
+    <div class="qa-block">
+      <h3>3. Most time engaging with?</h3>
+      <p>Clicking on each window took most of my attention — each one revealed new content with different styles and arrangements.</p>
+    </div>
+
+    <div class="qa-block">
+      <h3>4. Most common action?</h3>
+      <p>Scrolling and clicking windows. But the harsh contrast and lack of rounded borders made the site feel visually rigid.</p>
+    </div>
+
+    <div class="qa-block">
+      <h3>5. Impression of the goal?</h3>
+      <p>It feels like a digital showcase of creative exploration, presented through a gamified calendar interface.</p>
+    </div>
+
+    <div class="qa-block">
+      <h3>6. How is this goal communicated?</h3>
+      <p>The numbered boxes and hidden surprises suggest discovery and creative depth — each click unveils something new.</p>
+    </div>
+
+    <div class="qa-block">
+      <h3>7. Interaction over time?</h3>
+      <p>First-time users might leave early, but deeper exploration encourages extended visits as more is revealed.</p>
+    </div>
+
+    <div class="qa-block">
+      <h3>8. How is this communicated?</h3>
+      <p>The calendar-style layout implies a finite number of items to be completed in one go — or revisited casually.</p>
+    </div>
+
+    <div class="qa-block">
+      <h3>9. Media references?</h3>
+      <p>Advent calendars and digital portfolios are both clearly referenced.</p>
+    </div>
+
+    <div class="qa-block">
+      <h3>10. What does this tell you about interaction?</h3>
+      <p>It suggests exploration should be slow and methodical — box-by-box, like opening gifts.</p>
+    </div>
+
+    <div class="qa-block">
+      <h3>11. What about how you should feel?</h3>
+      <p>Anticipation and delight are embedded in the interface — you’re meant to enjoy each step.</p>
+    </div>
+
+    <div class="qa-block">
+      <h3>12. Most frustrating part?</h3>
+      <p>The lack of color variety and hover cues made it feel flat and uncertain at first.</p>
+    </div>
+
+    <div class="qa-block">
+      <h3>13. Most satisfying part?</h3>
+      <p>The moment when a window opens to reveal something unexpected — it’s satisfying and keeps you curious.</p>
+    </div>
